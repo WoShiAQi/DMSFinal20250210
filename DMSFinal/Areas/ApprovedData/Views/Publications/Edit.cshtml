@@ -1,0 +1,27 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PublicationsVMs.PublicationsVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.Department" />
+<wt:textbox field="Entity.Name" />
+<wt:combobox field="Entity.Title1" />
+<wt:combobox field="Entity.Title2" />
+<wt:combobox field="Entity.PublicationForm" />
+<wt:textbox field="Entity.PublicationName" />
+<wt:textbox field="Entity.Press" />
+<wt:datetime field="Entity.PublicationTime" />
+<wt:textbox field="Entity.WriteWordCount" />
+<wt:textbox field="Entity.BookNo" />
+<wt:combobox field="Entity.Rank" />
+<wt:combobox field="Entity.IsOurSchool" />
+<wt:textbox field="Entity.JobNo" />
+<wt:combobox field="Entity.Examine" />
+<wt:textbox field="Entity.Reason" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

@@ -1,0 +1,25 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PatentSoftnessVMs.PatentSoftnessListVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:combobox field="Searcher.Department" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Name" />
+<wt:combobox field="Searcher.Title1" empty-text="@Localizer["Sys.All"]" />
+<wt:combobox field="Searcher.Title2" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Topic" />
+<wt:combobox field="Searcher.PatentCategory" empty-text="@Localizer["Sys.All"]" />
+<wt:datetime field="Searcher.AuthorizedDate" range="true" />
+<wt:textbox field="Searcher.PatentNumber" />
+<wt:datetime field="Searcher.ApplicationTime" range="true" />
+<wt:textbox field="Searcher.ApplicationNumber" />
+<wt:combobox field="Searcher.IfEmployee" empty-text="@Localizer["Sys.All"]" />
+<wt:combobox field="Searcher.Rank" empty-text="@Localizer["Sys.All"]" />
+<wt:combobox field="Searcher.IsOurSchool" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.HoldTime" />
+<wt:textbox field="Searcher.JobNo" />
+@*<wt:combobox field="Searcher.Examine" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Reason" />*@
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/ApprovedData/PatentSoftness/Search"/>

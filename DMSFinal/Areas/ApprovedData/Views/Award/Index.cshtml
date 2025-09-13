@@ -1,0 +1,23 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.AwardVMs.AwardListVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:combobox field="Searcher.Department" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.JobNo" />
+<wt:textbox field="Searcher.Name" />
+<wt:combobox field="Searcher.Title1" empty-text="@Localizer["Sys.All"]" />
+<wt:combobox field="Searcher.Title2" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Topic" />
+<wt:textbox field="Searcher.AwardNo" />
+<wt:textbox field="Searcher.RewardName" />
+<wt:textbox field="Searcher.AwardingUnit" />
+<wt:combobox field="Searcher.AwardLevel" empty-text="@Localizer["Sys.All"]" />
+<wt:datetime field="Searcher.RewardTime" range="true" />
+<wt:combobox field="Searcher.Rank" empty-text="@Localizer["Sys.All"]" />
+<wt:combobox field="Searcher.IfOurSchool" empty-text="@Localizer["Sys.All"]" />
+@*<wt:combobox field="Searcher.Examine" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Reason" />*@
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/ApprovedData/Award/Search"/>

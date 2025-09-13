@@ -1,0 +1,32 @@
+﻿@model DMSFinal.BasicData.ViewModels.PersonInfoVMs.PersonInfoVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:display field="Entity.JobNo" />
+        <wt:display field="Entity.Name" />
+        <wt:display field="Entity.PersonID" />
+        <wt:display field="Entity.PoliticalID" />
+        <wt:checkbox field="SelectedTitleNamesIDs" items="AllTitleNamess" disabled="true" />
+        <wt:display field="Entity.Diplomas" />
+        <wt:display field="Entity.Degree" />
+        <wt:display field="Entity.GraduateTime" />
+        <wt:display field="Entity.InWorkTime" />
+        <wt:display field="Entity.PartTimeJob" />
+        <wt:display field="Entity.IfDoubleTeacher" />
+        <wt:display field="Entity.IfDisciplineLeader" />
+        <wt:display field="Entity.Discipline" />
+        <wt:multiupload field="Entity.PEvidence" upload-type="AllFiles" disabled="true" />
+        <wt:multiupload field="Entity.DeEvidence" upload-type="AllFiles" disabled="true" />
+        <wt:multiupload field="Entity.TEvidence" upload-type="AllFiles" disabled="true" />
+        <wt:multiupload field="Entity.TeaEvidence" upload-type="AllFiles" disabled="true" />
+        <wt:multiupload field="Entity.SEvidence" upload-type="AllFiles" disabled="true" />
+        <wt:display field="Entity.Examine" />
+        <wt:display field="Entity.Reason" />
+        <wt:row align="AlignEnum.Right">
+            <wt:closebutton />
+        </wt:row>
+        
+    </wt:row>
+    
+</wt:form>

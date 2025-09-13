@@ -1,0 +1,24 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.TeacherCompetitionVMs.TeacherCompetitionVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:display field="Entity.Department" />
+        <wt:display field="Entity.JobNo" />
+        <wt:display field="Entity.Name" />
+        <wt:display field="Entity.Title1" />
+        <wt:display field="Entity.Title2" />
+        <wt:display field="Entity.CompetitionName" />
+        <wt:display field="Entity.RewardLevel" />
+        <wt:display field="Entity.AwardingUnit" />
+        <wt:display field="Entity.Level" />
+        <wt:display field="Entity.RewardTime" />
+        <wt:display field="Entity.Rank" />
+        <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" disabled="true" />
+        @*<wt:display field="Entity.Examine" />
+        <wt:display field="Entity.Reason" />*@
+    </wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

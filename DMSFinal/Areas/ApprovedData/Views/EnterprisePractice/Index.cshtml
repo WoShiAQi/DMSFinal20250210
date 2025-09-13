@@ -1,0 +1,21 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.EnterprisePracticeVMs.EnterprisePracticeListVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:combobox field="Searcher.Department" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.JobNo" />
+<wt:textbox field="Searcher.Name" />
+<wt:combobox field="Searcher.Title1" empty-text="@Localizer["Sys.All"]" />
+<wt:combobox field="Searcher.Title2" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.CompanyName" />
+<wt:combobox field="Searcher.PracticalWay" empty-text="@Localizer["Sys.All"]" />
+<wt:datetime field="Searcher.StartTime" range="true" />
+<wt:datetime field="Searcher.EndTime" range="true" />
+<wt:textbox field="Searcher.Contacts" />
+<wt:textbox field="Searcher.PhoneNumber" />
+@*<wt:combobox field="Searcher.Examine" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Reason" />*@
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/ApprovedData/EnterprisePractice/Search"/>

@@ -1,0 +1,32 @@
+﻿@model DMSFinal.BasicData.ViewModels.PatentSoftnessVMs.PatentSoftnessVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:combobox field="Entity.Department" />
+        <wt:textbox field="Entity.JobNo" default-value="@Model.LoginUserInfo.ITCode" />
+        <wt:textbox field="Entity.Name" default-value="@Model.LoginUserInfo.Name" />
+        <wt:combobox field="Entity.Title1" />
+        <wt:combobox field="Entity.Title2" />
+        <wt:textbox field="Entity.Topic" />
+        <wt:combobox field="Entity.PatentCategory" />
+        <wt:datetime field="Entity.AuthorizedDate" />
+        <wt:textbox field="Entity.PatentNumber" />
+        <wt:datetime field="Entity.ApplicationTime" />
+        <wt:textbox field="Entity.ApplicationNumber" />
+        <wt:combobox field="Entity.IfEmployee" />
+        <wt:combobox field="Entity.Rank" />
+        <wt:combobox field="Entity.IsOurSchool" />
+        <wt:textbox field="Entity.HoldTime" />
+        <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" show-preview="true"/>
+        @if (@Model.LoginUserInfo.Roles[0].RoleCode == "001")
+        {
+            <wt:combobox field="Entity.Examine" />
+            <wt:textbox field="Entity.Reason" />
+        }
+    </wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

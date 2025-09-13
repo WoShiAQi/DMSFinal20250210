@@ -1,0 +1,31 @@
+﻿@model DMSFinal.BasicData.ViewModels.StudentCompetitionVMs.StudentCompetitionVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:combobox field="Entity.Department" />
+        <wt:textbox field="Entity.StudentName" />
+        <wt:textbox field="Entity.JobNo" />
+        <wt:textbox field="Entity.TeacherName" />
+        <wt:textbox field="Entity.CompetitionName" />
+        <wt:combobox field="Entity.AwardLevel" />
+        <wt:textbox field="Entity.AwardingUnit" />
+        <wt:combobox field="Entity.Level" />
+        <wt:datetime field="Entity.RewardTime" />
+        @if (@Model.LoginUserInfo.Roles[0].RoleCode == "001")
+        {
+            <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" disabled="true" />
+            <wt:combobox field="Entity.Examine" />
+            <wt:textbox field="Entity.Reason" />
+        }
+        else
+        {
+            <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" show-preview="true" />
+        }
+    </wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

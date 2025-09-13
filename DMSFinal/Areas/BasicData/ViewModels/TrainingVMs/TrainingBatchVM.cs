@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+using WalkingTec.Mvvm.Core;
+using WalkingTec.Mvvm.Core.Extensions;
+using DMSFinal.Model.BasicData;
+using DMSFinal.Model;
+using Microsoft.EntityFrameworkCore;
+
+namespace DMSFinal.BasicData.ViewModels.TrainingVMs
+{
+    public partial class TrainingBatchVM : BaseBatchVM<Training, Training_BatchEdit>
+    {
+        public TrainingListVM TrainListVM { get; set; }
+        public TrainingBatchVM()
+        {
+            ListVM = new TrainingListVM();
+            LinkedVM = new Training_BatchEdit();
+        }
+        protected override void InitVM()
+        {
+            TrainListVM = Wtm.CreateVM<TrainingListVM>();
+        }
+
+        public override bool DoBatchEdit()
+        {
+            var entityList = DC.Set<Training>().AsNoTracking().CheckIDs(Ids.ToList()).ToList();
+            foreach (var entity in entityList)
+            {
+                if (LinkedVM.SelectedTrainCodes != null)
+                {
+                    foreach (var rolecode in LinkedVM.SelectedTrainCodes)
+                    {
+                        Training r = new Training
+                        {
+                            Checked = entity.Checked
+                        };
+                        DC.AddEntity(r);
+                    }
+                }
+            }
+            return base.DoBatchEdit();
+        }
+    }
+
+	/// <summary>
+    /// Class to define batch edit fields
+    /// </summary>
+    public class Training_BatchEdit : BaseVM
+    {
+        [Display(Name = "部门")]
+        public DepartmentEnum? Department { get; set; }
+        [Display(Name = "工号")]
+        public String JobNo { get; set; }
+        [Display(Name = "姓名")]
+        public String Name { get; set; }
+        [Display(Name = "职称1")]
+        public TitleEnum? Title1 { get; set; }
+        [Display(Name = "职称2")]
+        public TitleEnum2? Title2 { get; set; }
+        [Display(Name = "培训项目")]
+        public String TrainName { get; set; }
+        [Display(Name = "学时")]
+        public Int32? TeachingTime { get; set; }
+        [Display(Name = "开始时间")]
+        public DateTime? StartTime { get; set; }
+        [Display(Name = "结束时间")]
+        public DateTime? EndTime { get; set; }
+        [Display(Name = "培训单位")]
+        public String TrainingUnit { get; set; }
+        [Display(Name = "审核")]
+        public CheckEnum? Examin { get; set; }
+        [Display(Name = "不通过原因")]
+        public String Reason { get; set; }
+        public List<string> SelectedTrainCodes { get; set; }
+        public List<ComboSelectListItem> AllTrains { get; set; }
+
+
+        protected override void InitVM()
+        {
+            AllTrains = DC.Set<Training>().GetSelectListItems(Wtm, y => y.Name, y => y.JobNo);
+        }
+
+    }
+
+}

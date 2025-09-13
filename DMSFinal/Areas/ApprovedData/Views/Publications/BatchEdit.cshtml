@@ -1,0 +1,29 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PublicationsVMs.PublicationsBatchVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <div style="margin-bottom:10px">@Localizer["Sys.BatchEditConfirm"] </div>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="LinkedVM.Department" />
+<wt:textbox field="LinkedVM.Name" />
+<wt:combobox field="LinkedVM.Title1" />
+<wt:combobox field="LinkedVM.Title2" />
+<wt:combobox field="LinkedVM.PublicationForm" />
+<wt:textbox field="LinkedVM.PublicationName" />
+<wt:textbox field="LinkedVM.Press" />
+<wt:datetime field="LinkedVM.PublicationTime" />
+<wt:textbox field="LinkedVM.WriteWordCount" />
+<wt:textbox field="LinkedVM.BookNo" />
+<wt:combobox field="LinkedVM.Rank" />
+<wt:combobox field="LinkedVM.IsOurSchool" />
+<wt:textbox field="LinkedVM.JobNo" />
+<wt:combobox field="LinkedVM.Examine" />
+<wt:textbox field="LinkedVM.Reason" />
+</wt:row>
+    <wt:hidden field="Ids" />
+    <wt:grid vm="ListVM" use-local-data="true" height="300"  hidden-checkbox="true" hidden-panel="true"/>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

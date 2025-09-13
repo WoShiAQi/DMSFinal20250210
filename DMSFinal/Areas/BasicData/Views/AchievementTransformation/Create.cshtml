@@ -1,0 +1,29 @@
+﻿@model DMSFinal.BasicData.ViewModels.AchievementTransformationVMs.AchievementTransformationVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:combobox field="Entity.Department" />
+        <wt:textbox field="Entity.JobNo" default-value="@Model.LoginUserInfo.ITCode" />
+        <wt:textbox field="Entity.Name" default-value="@Model.LoginUserInfo.Name" />
+        <wt:combobox field="Entity.Title1" />
+        <wt:combobox field="Entity.Title2" />
+        <wt:textbox field="Entity.SubjectName" />
+        <wt:textbox field="Entity.CompanyName" />
+        <wt:textbox field="Entity.Funds" />
+        <wt:datetime field="Entity.StartTime" />
+        <wt:datetime field="Entity.EndTime" />
+        <wt:textbox field="Entity.Participants" />
+        <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" show-preview="true" />
+        <wt:multiupload field="Entity.ApprovalDoc" upload-type="AllFiles" show-preview="true" />
+        @if (@Model.LoginUserInfo.Roles[0].RoleCode == "001")
+        {
+            <wt:combobox field="Entity.Examine" />
+            <wt:textbox field="Entity.Reason" />
+        }
+    </wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

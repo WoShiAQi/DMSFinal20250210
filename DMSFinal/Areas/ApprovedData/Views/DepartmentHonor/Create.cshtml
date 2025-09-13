@@ -1,0 +1,19 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.DepartmentHonorVMs.DepartmentHonorVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.Department" />
+<wt:textbox field="Entity.ProjectName" />
+<wt:textbox field="Entity.AwardingUnit" />
+<wt:combobox field="Entity.AwardLevel" />
+<wt:datetime field="Entity.RewardTime" />
+<wt:textbox field="Entity.AwardNo" />
+<wt:combobox field="Entity.Examine" />
+<wt:textbox field="Entity.Reason" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

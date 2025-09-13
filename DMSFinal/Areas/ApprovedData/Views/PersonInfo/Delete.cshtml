@@ -1,0 +1,28 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PersonInfoVMs.PersonInfoVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+	<wt:quote>@Localizer["Sys.DeleteConfirm"]</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.JobNo" />
+<wt:display field="Entity.Name" />
+<wt:display field="Entity.PersonID" />
+<wt:display field="Entity.PoliticalID" />
+
+<wt:display field="Entity.Diplomas" />
+<wt:display field="Entity.Degree" />
+<wt:display field="Entity.GraduateTime" />
+<wt:display field="Entity.InWorkTime" />
+<wt:display field="Entity.PartTimeJob" />
+<wt:display field="Entity.IfDoubleTeacher" />
+<wt:display field="Entity.IfDisciplineLeader" />
+<wt:display field="Entity.Discipline" />
+<wt:display field="Entity.Examine" />
+<wt:display field="Entity.Reason" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="@Localizer["Sys.Delete"]"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

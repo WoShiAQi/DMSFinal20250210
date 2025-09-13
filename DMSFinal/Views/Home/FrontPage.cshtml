@@ -1,0 +1,429 @@
+﻿@model WalkingTec.Mvvm.Core.BaseVM
+@using System.Text.Json
+
+<div class="layui-row layui-col-space15" id="frontpage">
+    <div class="layui-col-md8">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="layui-card-header">数据填报</div>
+                    <div class="layui-card-body">
+                        <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                            <div carousel-item>
+                                <ul class="layui-row layui-col-space10">
+                                    <li class="layui-col-xs3">
+                                        @*<a lay-href="/_codegen/index">*@
+                                        <a lay-href="/BasicData/PersonInfo">
+                                            <i class="layui-icon layui-icon-username"></i>
+                                            <cite>个人信息</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/Course">
+                                            <i class="layui-icon layui-icon-tabs"></i>
+                                            <cite>课程建设</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/JiaoYan">
+                                            <i class="layui-icon layui-icon-app"></i>
+                                            <cite>教研课题</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/VerticalSubject">
+                                            <i class="layui-icon layui-icon-user"></i>
+                                            <cite>纵向科研</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/DepartmentHonor">
+                                            <i class="layui-icon layui-icon-auz"></i>
+                                            <cite>系部荣誉</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/HorizontalSubject">
+                                            <i class="layui-icon layui-icon-console"></i>
+                                            <cite>横向课题</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/Paper" >
+                                            <i class="layui-icon layui-icon-template-1"></i>
+                                            <cite>论文</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/PatentSoftness" >
+                                            <i class="layui-icon layui-icon-read"></i>
+                                            <cite>专利软著</cite>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="layui-card-header">数据填报</div>
+                    <div class="layui-card-body">
+
+                        <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                            <div carousel-item>
+                                <ul class="layui-row layui-col-space10">
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/Rewards">
+                                            <i class="layui-icon layui-icon-username"></i>
+                                            <cite>奖励荣誉</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/Publications">
+                                            <i class="layui-icon layui-icon-tabs"></i>
+                                            <cite>著作</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/EnterprisePractice">
+                                            <i class="layui-icon layui-icon-app"></i>
+                                            <cite>企业实践</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/Award">
+                                            <i class="layui-icon layui-icon-user"></i>
+                                            <cite>成果奖</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/STAward">
+                                            <i class="layui-icon layui-icon-auz"></i>
+                                            <cite>科技进步奖</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/AchievementTransformation">
+                                            <i class="layui-icon layui-icon-console"></i>
+                                            <cite>成果转化</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/TeacherCompetition" >
+                                            <i class="layui-icon layui-icon-template-1"></i>
+                                            <cite>教师参赛</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/BasicData/StudentCompetition" >
+                                            <i class="layui-icon layui-icon-read"></i>
+                                            <cite>学生大赛</cite>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="layui-card-header">数据汇总</div>
+                    <div class="layui-card-body">
+
+                        <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                            <div carousel-item>
+                                <ul class="layui-row layui-col-space10">
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/PersonInfo">
+                                            <i class="layui-icon layui-icon-username"></i>
+                                            <cite>个人信息</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/Course">
+                                            <i class="layui-icon layui-icon-tabs"></i>
+                                            <cite>课程建设</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/JiaoYan">
+                                            <i class="layui-icon layui-icon-app"></i>
+                                            <cite>教研课题</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/VerticalSubject">
+                                            <i class="layui-icon layui-icon-user"></i>
+                                            <cite>纵向科研</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/DepartmentHonor">
+                                            <i class="layui-icon layui-icon-auz"></i>
+                                            <cite>系部荣誉</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/HorizontalSubject">
+                                            <i class="layui-icon layui-icon-console"></i>
+                                            <cite>横向课题</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/Paper" >
+                                            <i class="layui-icon layui-icon-template-1"></i>
+                                            <cite>论文</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/PatentSoftness" >
+                                            <i class="layui-icon layui-icon-read"></i>
+                                            <cite>专利软著</cite>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="layui-card-header">数据汇总</div>
+                    <div class="layui-card-body">
+
+                        <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                            <div carousel-item>
+                                <ul class="layui-row layui-col-space10">
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/Rewards">
+                                            <i class="layui-icon layui-icon-username"></i>
+                                            <cite>奖励荣誉</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/Publications">
+                                            <i class="layui-icon layui-icon-tabs"></i>
+                                            <cite>著作</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/EnterprisePractice">
+                                            <i class="layui-icon layui-icon-app"></i>
+                                            <cite>企业实践</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/Award">
+                                            <i class="layui-icon layui-icon-user"></i>
+                                            <cite>成果奖</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/STAward">
+                                            <i class="layui-icon layui-icon-auz"></i>
+                                            <cite>科技进步奖</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/AchievementTransformation">
+                                            <i class="layui-icon layui-icon-console"></i>
+                                            <cite>成果转化</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/TeacherCompetition" >
+                                            <i class="layui-icon layui-icon-template-1"></i>
+                                            <cite>教师参赛</cite>
+                                        </a>
+                                    </li>
+                                    <li class="layui-col-xs3">
+                                        <a lay-href="/ApprovedData/StudentCompetition" >
+                                            <i class="layui-icon layui-icon-read"></i>
+                                            <cite>学生大赛</cite>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md4">
+        <div class="layui-card">
+            <div class="layui-card-header">数据填报</div>
+            <div class="layui-card-body">
+
+                <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                    <div carousel-item>
+                        <ul class="layui-row layui-col-space10">
+                            <li class="layui-col-xs3">
+                                <a lay-href="/BasicData/Training">
+                                    <i class="layui-icon layui-icon-username"></i>
+                                    <cite>培训</cite>
+                                </a>
+                            </li>
+                            @*<li class="layui-col-xs3">
+                                <a lay-href="_Admin/FrameworkRole/Index">
+                                    <i class="layui-icon layui-icon-tabs"></i>
+                                    <cite>角色</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/FrameworkMenu/Index">
+                                    <i class="layui-icon layui-icon-app"></i>
+                                    <cite>菜单</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/FrameworkGroup/Index">
+                                    <i class="layui-icon layui-icon-user"></i>
+                                    <cite>用户组</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/DataPrivilege/Index">
+                                    <i class="layui-icon layui-icon-auz"></i>
+                                    <cite>数据权限</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/ActionLog/Index">
+                                    <i class="layui-icon layui-icon-console"></i>
+                                    <cite>日志</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="/_codegen/index" target="_blank">
+                                    <i class="layui-icon layui-icon-template-1"></i>
+                                    <cite>代码生成</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="https://wtmdoc.walkingtec.cn" target="_blank">
+                                    <i class="layui-icon layui-icon-read"></i>
+                                    <cite>文档</cite>
+                                </a>
+                            </li>*@
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-card">
+            <div class="layui-card-header">数据汇总</div>
+            <div class="layui-card-body">
+
+                <div class="layui-carousel layadmin-carousel layadmin-shortcut">
+                    <div carousel-item>
+                        <ul class="layui-row layui-col-space10">
+                            <li class="layui-col-xs3">
+                                <a lay-href="/ApprovedData/Training">
+                                    <i class="layui-icon layui-icon-username"></i>
+                                    <cite>培训</cite>
+                                </a>
+                            </li>
+                            @*<li class="layui-col-xs3">
+                                <a lay-href="_Admin/FrameworkRole/Index">
+                                    <i class="layui-icon layui-icon-tabs"></i>
+                                    <cite>角色</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/FrameworkMenu/Index">
+                                    <i class="layui-icon layui-icon-app"></i>
+                                    <cite>菜单</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/FrameworkGroup/Index">
+                                    <i class="layui-icon layui-icon-user"></i>
+                                    <cite>用户组</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/DataPrivilege/Index">
+                                    <i class="layui-icon layui-icon-auz"></i>
+                                    <cite>数据权限</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a lay-href="_Admin/ActionLog/Index">
+                                    <i class="layui-icon layui-icon-console"></i>
+                                    <cite>日志</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="/_codegen/index" target="_blank">
+                                    <i class="layui-icon layui-icon-template-1"></i>
+                                    <cite>代码生成</cite>
+                                </a>
+                            </li>
+                            <li class="layui-col-xs3">
+                                <a href="https://wtmdoc.walkingtec.cn" target="_blank">
+                                    <i class="layui-icon layui-icon-read"></i>
+                                    <cite>文档</cite>
+                                </a>
+                            </li>*@
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<script>
+  $("#frontpage").parents(".layui-card").css("background-color", "#eee").css("height","unset");
+  $.get("/Home/GetGithubInfo", function (r) {
+    if (r === undefined || r === null) {
+      return;
+    }
+    $("#githubstar").html(r.stargazers_count);
+    $("#githubstars").html(r.stargazers_count);
+    $("#githubfork").html(r.forks_count);
+    $("#githubwatch").html(r.subscribers_count);
+    $("#githubissue").html(r.open_issues_count);
+  });
+
+  //区块轮播切换
+  layui.use(['admin', 'carousel'], function () {
+    var $ = layui.$
+      , admin = layui.admin
+      , carousel = layui.carousel
+      , element = layui.element
+      , device = layui.device();
+
+    //轮播切换
+    $('.layadmin-carousel').each(function () {
+      var othis = $(this);
+      carousel.render({
+        elem: this
+        , width: '100%'
+        , arrow: 'none'
+        , interval: othis.data('interval')
+        , autoplay: othis.data('autoplay') === true
+        , trigger: (device.ios || device.android) ? 'click' : 'hover'
+        , anim: othis.data('anim')
+      });
+    });
+
+    element.render('progress');
+
+  });
+
+</script>

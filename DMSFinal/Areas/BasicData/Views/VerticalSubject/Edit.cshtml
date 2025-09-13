@@ -1,0 +1,42 @@
+﻿@model DMSFinal.BasicData.ViewModels.VerticalSubjectVMs.VerticalSubjectVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:combobox field="Entity.Department" />
+        <wt:textbox field="Entity.JobNo" />
+        <wt:textbox field="Entity.Name" />
+        <wt:combobox field="Entity.Title1" />
+        <wt:combobox field="Entity.Title2" />
+        <wt:textbox field="Entity.SubjectName" />
+        <wt:combobox field="Entity.SubjectLevel" />
+        <wt:textbox field="Entity.SubjectSource" />
+        <wt:textbox field="Entity.SubjectNo" />
+        <wt:textbox field="Entity.Funds" />
+        <wt:datetime field="Entity.StartTime" />
+        <wt:combobox field="Entity.IfCose" />
+        <wt:datetime field="Entity.EndTime" />
+        <wt:combobox field="Entity.Rank" />
+        <wt:combobox field="Entity.IfOurSchool" />
+
+        @if (@Model.LoginUserInfo.Roles[0].RoleCode == "001")
+        {
+            <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" disabled="true" />
+            <wt:multiupload field="Entity.ApprovalDoc" upload-type="AllFiles" disabled="true" />
+            <wt:multiupload field="Entity.AccCerti" upload-type="AllFiles" disabled="true" />
+            <wt:combobox field="Entity.Examine" />
+            <wt:textbox field="Entity.Reason" />
+        }
+        else
+        {
+            <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" show-preview="true" />
+            <wt:multiupload field="Entity.ApprovalDoc" upload-type="AllFiles" show-preview="true" />
+            <wt:multiupload field="Entity.AccCerti" upload-type="AllFiles" show-preview="true" />
+        }
+    </wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

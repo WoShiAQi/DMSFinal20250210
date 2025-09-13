@@ -1,0 +1,27 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PersonInfoVMs.PersonInfoVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:textbox field="Entity.JobNo" default-value="@Model.LoginUserInfo.ITCode" />
+        <wt:textbox field="Entity.Name" default-value="@Model.LoginUserInfo.Name" />
+        <wt:textbox field="Entity.PersonID" />
+        <wt:combobox field="Entity.PoliticalID" />
+        <wt:checkbox field="SelectedTitleNamesIDs" items="AllTitleNamess" />
+        <wt:combobox field="Entity.Diplomas" />
+        <wt:combobox field="Entity.Degree" />
+        <wt:datetime field="Entity.GraduateTime" />
+        <wt:datetime field="Entity.InWorkTime" />
+        <wt:textbox field="Entity.PartTimeJob" />
+        <wt:combobox field="Entity.IfDoubleTeacher" />
+        <wt:combobox field="Entity.IfDisciplineLeader" />
+        <wt:textbox field="Entity.Discipline" />
+        
+        <wt:combobox field="Entity.Examine"  />
+        <wt:textbox field="Entity.Reason" />
+    </wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

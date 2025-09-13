@@ -1,0 +1,23 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.TrainingVMs.TrainingVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.Department" />
+<wt:textbox field="Entity.JobNo" />
+<wt:textbox field="Entity.Name" />
+<wt:combobox field="Entity.Title1" />
+<wt:combobox field="Entity.Title2" />
+<wt:textbox field="Entity.TrainName" />
+<wt:textbox field="Entity.TeachingTime" />
+<wt:datetime field="Entity.StartTime" />
+<wt:datetime field="Entity.EndTime" />
+<wt:textbox field="Entity.TrainingUnit" />
+<wt:combobox field="Entity.Examin" />
+<wt:textbox field="Entity.Reason" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

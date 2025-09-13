@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>disable</Nullable>  
+  
+    <CopyRefAssembliesToPublishDirectory>true</CopyRefAssembliesToPublishDirectory>
+</PropertyGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Include="Elsa.Designer.Components.Web" Version="2.13.0" />
+    <PackageReference Include="WalkingTec.Mvvm.TagHelpers.LayUI" Version="5.10.30" />
+    <PackageReference Include="WalkingTec.Mvvm.Mvc" Version="5.10.30" />
+</ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="Areas\ApprovedData\Controllers\" />
+    <Folder Include="Areas\ApprovedData\ViewModels\" />
+    <Folder Include="Areas\ApprovedData\Views\" />
+    <Folder Include="Areas\BasicData\Controllers\" />
+    <Folder Include="Areas\BasicData\ViewModels\" />
+    <Folder Include="Areas\BasicData\Views\" />
+  </ItemGroup>
+</Project>
+

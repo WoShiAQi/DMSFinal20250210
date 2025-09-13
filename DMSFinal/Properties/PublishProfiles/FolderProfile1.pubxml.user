@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\y\Desktop\DMS20250210</_PublishTargetUrl>
+    <History>True|2025-02-10T09:49:59.2469591Z;True|2025-02-10T17:48:08.0687204+08:00;True|2025-02-10T15:34:28.7949091+08:00;True|2025-02-10T15:33:13.0800983+08:00;True|2025-02-10T15:32:56.2779054+08:00;True|2024-11-19T15:21:08.8300355+08:00;True|2024-10-21T13:49:50.6799228+08:00;True|2024-10-10T19:13:30.0970445+08:00;True|2024-10-07T18:56:55.9512269+08:00;True|2024-07-11T10:12:41.0698413+08:00;True|2024-07-09T21:17:14.9282765+08:00;</History>
+  </PropertyGroup>
+</Project>

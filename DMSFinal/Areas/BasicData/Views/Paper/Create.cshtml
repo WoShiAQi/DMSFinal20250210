@@ -1,0 +1,37 @@
+﻿@model DMSFinal.BasicData.ViewModels.PaperVMs.PaperVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:combobox field="Entity.Department" />
+        <wt:textbox field="Entity.JobNo" default-value="@Model.LoginUserInfo.ITCode" />
+        <wt:textbox field="Entity.Name" default-value="@Model.LoginUserInfo.Name" />
+        <wt:combobox field="Entity.Title1" />
+        <wt:combobox field="Entity.Title2" />
+        <wt:textbox field="Entity.PaperTitle" />
+        <wt:textbox field="Entity.MagazineName" />
+        <wt:datetime field="Entity.PublicTime" />
+        <wt:textbox field="Entity.Info" />
+        <wt:combobox field="Entity.Category" />
+        <wt:combobox field="Entity.IsSCI" />
+        <wt:textbox field="Entity.SCINo" />
+        <wt:combobox field="Entity.IsEI" />
+        <wt:textbox field="Entity.EINo" />
+        <wt:combobox field="Entity.IsISTP" />
+        <wt:textbox field="Entity.ISTPNo" />
+        <wt:textbox field="Entity.Num" />
+        <wt:textbox field="Entity.ImpactFactor" />
+        <wt:combobox field="Entity.Rank" />
+        <wt:combobox field="Entity.IsOurSchool" />
+        <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" show-preview="true" />
+        @if (@Model.LoginUserInfo.Roles[0].RoleCode == "001")
+        {
+            <wt:combobox field="Entity.Examine" />
+            <wt:textbox field="Entity.Reason" />
+        }
+    </wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

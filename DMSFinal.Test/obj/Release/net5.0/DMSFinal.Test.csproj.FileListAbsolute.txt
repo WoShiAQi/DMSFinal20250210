@@ -1,0 +1,7 @@
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.csproj.AssemblyReference.cache
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.AssemblyInfoInputs.cache
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.AssemblyInfo.cs
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.csproj.CoreCompileInputs.cache
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.MvcApplicationPartsAssemblyInfo.cs
+D:\开发\机电系\最终版\DMSFinal\DMSFinal.Test\obj\Release\net5.0\DMSFinal.Test.MvcApplicationPartsAssemblyInfo.cache

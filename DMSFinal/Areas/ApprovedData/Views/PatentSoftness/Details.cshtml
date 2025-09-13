@@ -1,0 +1,28 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PatentSoftnessVMs.PatentSoftnessVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <wt:row items-per-row="ItemsPerRowEnum.Two">
+        <wt:display field="Entity.Department" />
+        <wt:display field="Entity.Name" />
+        <wt:display field="Entity.Title1" />
+        <wt:display field="Entity.Title2" />
+        <wt:display field="Entity.Topic" />
+        <wt:display field="Entity.PatentCategory" />
+        <wt:display field="Entity.AuthorizedDate" />
+        <wt:display field="Entity.PatentNumber" />
+        <wt:display field="Entity.ApplicationTime" />
+        <wt:display field="Entity.ApplicationNumber" />
+        <wt:display field="Entity.IfEmployee" />
+        <wt:display field="Entity.Rank" />
+        <wt:display field="Entity.IsOurSchool" />
+        <wt:display field="Entity.HoldTime" />
+        <wt:display field="Entity.JobNo" />
+        <wt:multiupload field="Entity.Evidence" upload-type="AllFiles" disabled="true" />
+        @*<wt:display field="Entity.Examine" />
+        <wt:display field="Entity.Reason" />*@
+    </wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

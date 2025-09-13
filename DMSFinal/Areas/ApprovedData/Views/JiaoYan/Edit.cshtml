@@ -1,0 +1,29 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.JiaoYanVMs.JiaoYanVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.Department" />
+<wt:textbox field="Entity.JobNo" />
+<wt:textbox field="Entity.Name" />
+<wt:combobox field="Entity.Title1" />
+<wt:combobox field="Entity.Title2" />
+<wt:textbox field="Entity.SubjectName" />
+<wt:combobox field="Entity.SubjectLevel" />
+<wt:textbox field="Entity.SubjectSource" />
+<wt:textbox field="Entity.SubjectNo" />
+<wt:textbox field="Entity.Funds" />
+<wt:datetime field="Entity.StartTime" />
+<wt:combobox field="Entity.IfClose" />
+<wt:datetime field="Entity.EndTime" />
+<wt:combobox field="Entity.Rank" />
+<wt:combobox field="Entity.IfOurSchool" />
+<wt:combobox field="Entity.Examine" />
+<wt:textbox field="Entity.Reason" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

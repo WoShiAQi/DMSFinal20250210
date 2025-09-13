@@ -1,0 +1,16 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.DepartmentHonorVMs.DepartmentHonorListVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:combobox field="Searcher.Department" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.ProjectName" />
+<wt:textbox field="Searcher.AwardingUnit" />
+<wt:combobox field="Searcher.AwardLevel" empty-text="@Localizer["Sys.All"]" />
+<wt:datetime field="Searcher.RewardTime" range="true" />
+<wt:textbox field="Searcher.AwardNo" />
+@*<wt:combobox field="Searcher.Examine" empty-text="@Localizer["Sys.All"]" />
+<wt:textbox field="Searcher.Reason" />*@
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/ApprovedData/DepartmentHonor/Search"/>

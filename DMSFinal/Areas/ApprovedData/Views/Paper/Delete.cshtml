@@ -1,0 +1,35 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PaperVMs.PaperVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+	<wt:quote>@Localizer["Sys.DeleteConfirm"]</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Department" />
+<wt:display field="Entity.JobNo" />
+<wt:display field="Entity.Name" />
+<wt:display field="Entity.Title1" />
+<wt:display field="Entity.Title2" />
+<wt:display field="Entity.PaperTitle" />
+<wt:display field="Entity.MagazineName" />
+<wt:display field="Entity.PublicTime" />
+<wt:display field="Entity.Info" />
+<wt:display field="Entity.Category" />
+<wt:display field="Entity.IsSCI" />
+<wt:display field="Entity.SCINo" />
+<wt:display field="Entity.IsEI" />
+<wt:display field="Entity.EINo" />
+<wt:display field="Entity.IsISTP" />
+<wt:display field="Entity.ISTPNo" />
+<wt:display field="Entity.Num" />
+<wt:display field="Entity.ImpactFactor" />
+<wt:display field="Entity.Rank" />
+<wt:display field="Entity.IsOurSchool" />
+<wt:display field="Entity.Examine" />
+<wt:display field="Entity.Reason" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="@Localizer["Sys.Delete"]"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

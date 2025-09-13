@@ -1,0 +1,22 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.PersonInfoVMs.PersonInfoListVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+    <wt:row items-per-row="ItemsPerRowEnum.Three">
+        <wt:textbox field="Searcher.JobNo" />
+        <wt:textbox field="Searcher.Name" />
+        <wt:textbox field="Searcher.PersonID" />
+        <wt:combobox field="Searcher.PoliticalID" empty-text="@Localizer["Sys.All"]"/>
+        <wt:combobox field="Searcher.SelectedTitleNamesIDs" items="Searcher.AllTitleNamess" empty-text="@Localizer["Sys.All"]" />
+        <wt:combobox field="Searcher.Diplomas"  />
+        <wt:combobox field="Searcher.Degree"  />
+        <wt:datetime field="Searcher.GraduateTime" range="true" />
+        <wt:datetime field="Searcher.InWorkTime" range="true" />
+        <wt:textbox field="Searcher.PartTimeJob" />
+        <wt:combobox field="Searcher.IfDoubleTeacher"  />
+        <wt:combobox field="Searcher.IfDisciplineLeader" />
+        <wt:textbox field="Searcher.Discipline" />
+        @*<wt:textbox field="Searcher.Reason" />*@       
+    </wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/ApprovedData/PersonInfo/Search"/>

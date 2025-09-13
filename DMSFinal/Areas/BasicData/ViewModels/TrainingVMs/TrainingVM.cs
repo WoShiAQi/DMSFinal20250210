@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using WalkingTec.Mvvm.Core;
+using WalkingTec.Mvvm.Core.Extensions;
+using DMSFinal.Model.BasicData;
+using DMSFinal.Model;
+
+namespace DMSFinal.BasicData.ViewModels.TrainingVMs
+{
+    public partial class TrainingVM : BaseCRUDVM<Training>
+    {
+
+        public TrainingVM()
+        {
+            SetInclude(x => x.Evidence);
+        }
+
+        protected override void InitVM()
+        {
+        }
+
+        public override void DoAdd()
+        {
+            Entity.Examin = CheckEnum.Checking;
+            base.DoAdd();
+        }
+
+        public override void DoEdit(bool updateAllFields = false)
+        {
+            base.DoEdit(updateAllFields);
+        }
+
+        public override void DoDelete()
+        {
+            base.DoDelete();
+        }
+    }
+}

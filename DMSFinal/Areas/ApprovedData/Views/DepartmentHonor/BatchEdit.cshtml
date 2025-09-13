@@ -1,0 +1,22 @@
+﻿@model DMSFinal.ApprovedData.ViewModels.DepartmentHonorVMs.DepartmentHonorBatchVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <div style="margin-bottom:10px">@Localizer["Sys.BatchEditConfirm"] </div>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="LinkedVM.Department" />
+<wt:textbox field="LinkedVM.ProjectName" />
+<wt:textbox field="LinkedVM.AwardingUnit" />
+<wt:combobox field="LinkedVM.AwardLevel" />
+<wt:datetime field="LinkedVM.RewardTime" />
+<wt:textbox field="LinkedVM.AwardNo" />
+<wt:combobox field="LinkedVM.Examine" />
+<wt:textbox field="LinkedVM.Reason" />
+</wt:row>
+    <wt:hidden field="Ids" />
+    <wt:grid vm="ListVM" use-local-data="true" height="300"  hidden-checkbox="true" hidden-panel="true"/>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

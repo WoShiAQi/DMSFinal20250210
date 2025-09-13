@@ -1,0 +1,35 @@
+﻿@model DMSFinal.BasicData.ViewModels.TrainingVMs.TrainingBatchVM
+@inject IStringLocalizer<Program> Localizer;
+
+<wt:form vm="@Model">
+    <div style="margin-bottom:10px">@Localizer["Sys.BatchEditConfirm"] </div>
+    @if (@Model.LoginUserInfo.Roles[0].RoleCode == "001")
+    {
+        <wt:row items-per-row="ItemsPerRowEnum.Two">
+            <wt:combobox field="LinkedVM.Examin" />
+        </wt:row>
+    }
+    else
+    {
+        <wt:row items-per-row="ItemsPerRowEnum.Two">
+            <wt:combobox field="LinkedVM.Department" />
+            <wt:textbox field="LinkedVM.JobNo" />
+            <wt:textbox field="LinkedVM.Name" />
+            <wt:combobox field="LinkedVM.Title1" />
+            <wt:combobox field="LinkedVM.Title2" />
+            <wt:textbox field="LinkedVM.TrainName" />
+            <wt:textbox field="LinkedVM.TeachingTime" />
+            <wt:datetime field="LinkedVM.StartTime" />
+            <wt:datetime field="LinkedVM.EndTime" />
+            <wt:textbox field="LinkedVM.TrainingUnit" />
+            <wt:combobox field="LinkedVM.Examin" />
+            <wt:textbox field="LinkedVM.Reason" />
+        </wt:row>
+    }
+        <wt:hidden field="Ids" />
+        <wt:grid vm="ListVM" use-local-data="true" height="300" hidden-checkbox="true" hidden-panel="true" />
+        <wt:row align="AlignEnum.Right">
+            <wt:submitbutton />
+            <wt:closebutton />
+        </wt:row>
+    </wt:form>
